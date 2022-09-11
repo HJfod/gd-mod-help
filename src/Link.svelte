@@ -1,9 +1,16 @@
 <script lang="ts">
     export let text;
+    export let page = "";
+
+    import { navigateTo } from "./Pages";
+    
+    function onNextPage() {
+        navigateTo(page);
+    }
 </script>
 
 <button>
-    <div>
+    <div on:click={onNextPage}>
         <p>{text}</p>
         <span class="arrow"></span>
     </div>
