@@ -1,0 +1,38 @@
+name: Deploy to Github Pages
+# thanks https://github.com/matcool/matcool.github.io/blob/master/.github/workflows/deploy.yml
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.1
+        with:
+          persist-credentials: false
+          
+      - name: Node
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: '12'
+
+      - name: Install and Build
+        run: |
+          npm i
+          npm run build
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: dist
+          clean: true
+          clean-exclude: |
+            .nojekyll
