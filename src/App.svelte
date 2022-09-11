@@ -12,4 +12,13 @@
         <Link text="I want to install a mod" />
         <Link text="I want to make my own mod" />
     </Items>
+
+    <!-- teehehee -->
+    <br/><br/><br/><br/><br/>
+    <hr>
+    <br/>
+
+    <footer>
+        <p>Site by HJfod. Please contact HJfod#1795 on Discord for further assistance. (c) HJfod 2022</p>
+    </footer>
 </main>

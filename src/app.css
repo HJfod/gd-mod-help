@@ -53,6 +53,13 @@ h3 {
     opacity: 50%;
 }
 
+footer {
+    padding-top: auto;
+    margin-top: auto;
+    margin-bottom: 0;
+    opacity: 50%;
+}
+
 a {
     font-weight: 500;
     color: var(--link-color);
@@ -65,10 +72,15 @@ a:hover {
 
 body {
     margin: 0;
+    padding: 0;
     display: flex;
     place-items: center;
     min-width: 320px;
     min-height: 100vh;
+}
+
+hr {
+    opacity: 20%;
 }
 
 .card {
