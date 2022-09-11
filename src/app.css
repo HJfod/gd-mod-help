@@ -1,14 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
+@media (prefers-color-scheme: light) {
+    :root {
+        --body-bg:              #eee;
+        --body-color:           #000;
+    }
+
+    a:hover {
+        color: #747bff;
+    }
+
+    button {
+        background-color: #f9f9f9;
+    }
+}
+
 :root {
+    --body-bg:              hsla(150, 0%,  15%);
+    --body-color:           hsla(0,   0%,  90%,  100%);
+    --link-color:           hsla(150, 50%, 80%);
+    --link-color-hover:     hsla(150, 50%, 100%);
+    --button-bg:            hsla(0,   0%,  10%);
+    --button-border-left:   hsla(150, 50%, 50%,  35%);
+    --button-border-hover:  hsla(150, 50%, 50%);
+    --header-text:          hsla(150, 50%, 50%);
+
     font-family: 'Helvetica', 'Arial', sans-serif;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
 
     color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
+    color: var(--body-color);
+    background-color: var(--body-bg);
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -20,16 +44,23 @@
 h1 {
     font-family: 'Varela Round', sans-serif;
     font-weight: bold;
+    font-size: 3.2em;
+    line-height: 1.1;
+    color: var(--header-text);
+}
+
+h3 {
+    opacity: 50%;
 }
 
 a {
     font-weight: 500;
-    color: #646cff;
+    color: var(--link-color);
     text-decoration: inherit;
 }
 
 a:hover {
-    color: #535bf2;
+    color: var(--link-color-hover);
 }
 
 body {
@@ -38,11 +69,6 @@ body {
     place-items: center;
     min-width: 320px;
     min-height: 100vh;
-}
-
-h1 {
-    font-size: 3.2em;
-    line-height: 1.1;
 }
 
 .card {
@@ -63,31 +89,16 @@ button {
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
-    background-color: #1a1a1a;
+    background-color: var(--button-bg);
     cursor: pointer;
     transition-duration: .25s;
 }
 
 button:hover {
-    border-color: #646cff;
+    border-color: var(--button-border-hover);
 }
 
 button:focus,
 button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-    :root {
-        color: #213547;
-        background-color: #ffffff;
-    }
-
-    a:hover {
-        color: #747bff;
-    }
-
-    button {
-        background-color: #f9f9f9;
-    }
 }

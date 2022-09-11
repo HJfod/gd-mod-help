@@ -18,19 +18,23 @@
             display: flex;
             justify-content: start;
             align-items: center;
-            gap: 10px;
             flex-direction: row;
-            border-left: .5em solid hsla(237, 100%, 70%, 50%);
+            border-left: .5em solid var(--button-border-left);
             border-radius: inherit;
-            padding: 1em;
+            padding: .6em;
+            padding-right: 2em;
 
             justify-self: start;
+
+            > p {
+                margin-left: .5em;
+            }
 
             > .arrow {
                 border: solid white;
                 border-width: 0 .25em .25em 0;
-                padding: .4em;
-                transform: rotate(-45deg) translate(-1em, -1em);
+                padding: .35em;
+                transform: rotate(-45deg) translate(-.5em, -.5em);
                 margin-left: auto;
                 justify-self: end;
                 float: right;
