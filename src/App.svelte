@@ -1,8 +1,15 @@
 <script lang="ts">
-  import Counter from './lib/Counter.svelte'
+    import Link from './lib/Link.svelte'
+    import Items from './lib/Items.svelte';
 </script>
 
 <main>
-    <p>Sup bitches, check out my new crew</p>
-    <Counter />
+    <h1>GD Modding Help</h1>
+    <h3>Please select your problem:</h3>
+
+    <Items>
+        <Link text="I want to find mods" />
+        <Link text="I want to install a mod" />
+        <Link text="I want to make my own mod" />
+    </Items>
 </main>
